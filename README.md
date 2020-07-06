@@ -1,11 +1,7 @@
-# Rect App Demo
-
-----
-## Installation
-
+# Teleport Rect App Demo
 ----
 ## Install the Client (React)
-1. navigate to existing folder
+1. navigate to cloned folder
 2. npm install
 3. npm start 
 
