@@ -33,6 +33,8 @@ const Weather = props => {
         const img = require (`../../assets/${currentWeather.icon}.png`);
         ////Convert the temprature status to celcius format
         const celcius = convertKelvinToCelsius (main.temp);
+        ////Check to see is name of city is exist
+        const city = name === '' ? heading : name;
         if (weather) {
           return (
             <React.Fragment>
@@ -44,10 +46,10 @@ const Weather = props => {
                     <main>
                       <div className="location-box">
                         <div className="location">
-                          {name}
-                          ,
-                          {' '}
-                          {getName (sys.country.toUpperCase ())}
+                          {city}
+                          {name === ''
+                            ? ''
+                            : `, ${getName (sys.country.toUpperCase ())}`}
                         </div>
                         <div className="date">
                           <Moment unix format="dddd, D MMMM, YYYY">
