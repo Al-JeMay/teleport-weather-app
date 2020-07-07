@@ -9,7 +9,6 @@
 
     To run it locally make sure:
     ~ update/replace your google API key inside index.html (public/index.html)
-    ~ enable your project with Google API Services (Maps Javascript API, Geocoding API & Places API)
     ~ otherwise the search for place will not working
     ~ alternatively you can view the live demo as the link below :)
 
