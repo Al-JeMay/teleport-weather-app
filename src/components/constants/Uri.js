@@ -6,4 +6,4 @@
  email: azmanshaffie@gmail.com
 ===========================================================
 */
-export const owmap = 'http://api.openweathermap.org/data/2.5/';
+export const owmap = 'https://api.openweathermap.org/data/2.5/';

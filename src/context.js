@@ -16,8 +16,9 @@ const Context = React.createContext ();
 ////Store as global to share within any child's components
 export const Provider = props => {
   ////Store/update the selected coords provide by user input
+  //// Initial value for Kuala Lumpur's latitutude & longitude
   const [currentCoord, setCurrentCoord] = useState ({
-    lat: '3.140352', //// Initial value for Kuala Lumpur's latitutude & longitude
+    lat: '3.140352',
     lng: '101.692017',
   });
 
@@ -62,26 +63,24 @@ export const Provider = props => {
     return <p>weather info is EMPTY!</p>;
   }
   ////Finaly, pass the success response to the children as a props
+  ////Use the context library to manage the state
+  ////To be shared the raw data between its children
+  ////this library is good to manupulate state of data
+  ////alternative library from Redux@Reducer
   return (
-    ////Use the context library to manage the state
-    ////To be shared the raw data between its children
-    ////this library is good to manupulate state of data
-    ////alternative library from Redux@Reducer
-    (
-      <Context.Provider
-        value={
-          weather && {
-            weather,
-            heading,
-            setHeading,
-            currentCoord,
-            setCurrentCoord,
-          }
+    <Context.Provider
+      value={
+        weather && {
+          weather,
+          heading,
+          setHeading,
+          currentCoord,
+          setCurrentCoord,
         }
-      >
-        {props.children}
-      </Context.Provider>
-    )
+      }
+    >
+      {props.children}
+    </Context.Provider>
   );
 };
 

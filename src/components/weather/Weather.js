@@ -64,9 +64,10 @@ const Weather = props => {
                         <div className="current-weather">
                           {currentWeather.main}
                         </div>
-                        <div className="text-center">
-                          <img src={img} className="rounded" alt="..." />
-                        </div>
+                        {img &&
+                          <div className="text-center">
+                            <img src={img} className="rounded" alt="..." />
+                          </div>}
                         <p className="lead text-white mt-5">
                           {`${getDayOrNight === 'd' ? 'Today' : 'Tonight'} weather in ${heading} is ${currentWeather.description}, ${celcius} degrees celsius`}
                         </p>
