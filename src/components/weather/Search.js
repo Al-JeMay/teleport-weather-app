@@ -102,7 +102,7 @@ const Search = props => {
                       })}
                     </div>
                     <button
-                      className="btn btn-primary btn-md btn-block mb-2"
+                      className="btn btn-info btn-md btn-block mb-2"
                       type="submit"
                     >
                       Get the weather

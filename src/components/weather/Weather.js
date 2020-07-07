@@ -38,9 +38,10 @@ const Weather = props => {
         if (weather) {
           return (
             <React.Fragment>
-
-              <div className="card">
-                <h5 className="card-header text-center">{heading}</h5>
+              <div className="card mb-5">
+                <h5 className="card-header text-center text-muted">
+                  {heading}
+                </h5>
                 <div className="card-body m-0 p-0">
                   <div className={whichBgClass}>
                     <main>
@@ -59,16 +60,20 @@ const Weather = props => {
                       </div>
                       <div className="weather-box text-center">
                         <div className="temp">
-                          {celcius}° c
+                          {celcius}°c
                         </div>
                         <div className="current-weather">
                           {currentWeather.main}
                         </div>
                         {img &&
                           <div className="text-center">
-                            <img src={img} className="rounded" alt="..." />
+                            <img
+                              src={img}
+                              className="rounded icon-shadowed"
+                              alt="..."
+                            />
                           </div>}
-                        <p className="lead text-white mt-5">
+                        <p className="lead text-white mt-4 ml-2 mr-2 text-shadow">
                           {`${getDayOrNight === 'd' ? 'Today' : 'Tonight'} weather in ${heading} is ${currentWeather.description}, ${celcius} degrees celsius`}
                         </p>
                       </div>

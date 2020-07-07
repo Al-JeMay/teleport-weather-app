@@ -12,7 +12,9 @@ const Navbar = () => {
   return (
     <nav className="navbar  navbar-dark bg-dark mb-5">
       <span className="navbar-brand mb-0 h1 mx-auto">
-        Teleport Weather Location App Demo <span className="navbar-text ml-3">
+        Teleport Weather Location App Demo
+        {' '}
+        <span className="navbar-text text-center">
           &copy; Al~Jemay
         </span>
       </span>

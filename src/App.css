@@ -87,6 +87,16 @@
   text-align: center;
 }
 
+.text-shadow {
+  text-shadow: 3px 3px rgba(8, 56, 83, 0.5);
+}
+
+.icon-shadowed {
+  width: 150px;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+}
+
 main {
   min-height: 100vh;
   background-image: linear-gradient(
