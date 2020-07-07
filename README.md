@@ -5,10 +5,12 @@
 2. npm install
 3. npm start 
 
->development server will run on localhost port 3000 >>> http://localhost:3000
+>development server will run on localhost port 3000
+
+    http://localhost:3000
 
     To run it locally make sure:
-    ~ update/replace your google API key inside index.html (public/index.html)
+    ~ use port:3000 
     ~ otherwise the search for place will not working
     ~ alternatively you can view the live demo as the link below :)
 
