@@ -7,7 +7,7 @@
 
 >development server will run on localhost port 3000 >>> http://localhost:3000
 
-    To run locally make sure to provide :
+    To run it locally make:
     ~ update/replace your google API key inside index.html (public/index.html)
     ~ enable your project with Google API Services (Maps Javascript API, Geocoding API & Places API)
     ~ otherwise the search for place will not working
