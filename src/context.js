@@ -25,6 +25,7 @@ export const Provider = props => {
   //// Store/update the main heading props
   const [heading, setHeading] = useState ('Kuala Lumpur');
   //// Store/update the main raw weather data got from the request/response API
+  if (!currentCoord) return null;
   const {data: weather, isLoading, error} = DatatFetCher (
     `${owmap}weather?lat=${currentCoord.lat}&lon=${currentCoord.lng}&appid=${process.env.REACT_APP_WH_KEY}`
   );

@@ -38,9 +38,11 @@ const Search = props => {
   ////Handle for dispatch current result from the response API to update the root context
   const findWeather = (setCoord, setHeading, e) => {
     e.preventDefault ();
-    setCoord (coordinates);
-    setHeading (address);
-    setAddress ('');
+    if (coordinates && address) {
+      setCoord (coordinates);
+      setHeading (address);
+      setAddress ('');
+    }
   };
 
   return (
@@ -48,7 +50,7 @@ const Search = props => {
       {value => {
         const {setCurrentCoord, setHeading} = value;
         return (
-          <div>
+          <div className="search">
             <PlacesAutocomplete
               value={address}
               onChange={setAddress}
@@ -85,24 +87,23 @@ const Search = props => {
                         })}
                       />
                     </div>
-                    <div>
+                    <div className="mb-2">
                       {loading ? <Spinner /> : null}
                       {suggestions.map (suggestion => {
                         return (
                           <ul
-                            className="list-group"
+                            className="list-group mb-1"
                             {...getSuggestionItemProps (suggestion)}
                           >
                             <li className="list-group-item list-group-item-action">
                               <small>{suggestion.description}</small>
                             </li>
-
                           </ul>
                         );
                       })}
                     </div>
                     <button
-                      className="btn btn-info btn-md btn-block mb-2"
+                      className="btn btn-info btn-md btn-block mb-2 bg-dark"
                       type="submit"
                     >
                       Get the weather

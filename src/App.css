@@ -97,6 +97,10 @@
   filter: drop-shadow(5px 5px 5px #222);
 }
 
+.search {
+  margin-top: 110px;
+}
+
 main {
   min-height: 100vh;
   background-image: linear-gradient(

@@ -10,13 +10,13 @@ import React from 'react';
 
 const Navbar = () => {
   return (
-    <nav className="navbar  navbar-dark bg-dark mb-5">
+    <nav className="navbar navbar-dark bg-dark fixed-top p-0 pt-1">
       <span className="navbar-brand mb-0 h1 mx-auto">
         Teleport Weather Location App Demo
-        {' '}
-        <span className="navbar-text text-center">
-          &copy; Al~Jemay
-        </span>
+        <br />
+        <small className="navbar-text text-right">
+          &copy; Al~Jemay 2020
+        </small>
       </span>
     </nav>
   );
